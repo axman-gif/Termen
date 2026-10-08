@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: Build",
+            "type": "shell",
+            "command": "cmake --build build --config Release",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "CMake: Configure",
+            "type": "shell",
+            "command": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Quick Build (g++ direct with Noten raylib)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++23",
+                "-O2",
+                "src/main.cpp",
+                "src/app.cpp",
+                "src/font_system.cpp",
+                "src/glossary.cpp",
+                "src/text_utils.cpp",
+                "src/config_manager.cpp",
+                "-Iinclude",
+                "-I../Noten/build/_deps/raylib-src/src",
+                "-L../Noten/build/_deps/raylib-build/raylib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm",
+                "-lshell32",
+                "-mwindows",
+                "-o",
+                "Termen.exe"
+            ],
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

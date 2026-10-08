@@ -1,0 +1,10 @@
+{
+  "size": 64,
+  "glossary_size": 20,
+  "ahead": 1,
+  "bgt": [0, 0, 0],
+  "bgb": [220, 40, 40],
+  "txc": [245, 200, 30],
+  "acr_key": 290,
+  "font": "__default__"
+}

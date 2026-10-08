@@ -1,0 +1,21 @@
+# Binarios y compilación
+build/
+bin/
+*.exe
+*.o
+*.a
+*.obj
+*.tmp
+
+# Archivos de respaldo y datos locales temporales
+respaldos/
+*.csv.tmp
+
+# Entorno de desarrollo
+.vscode/*
+!.vscode/tasks.json
+!.vscode/settings.json
+.idea/
+.vs/
+CMakeSettings.json
+compile_commands.json
